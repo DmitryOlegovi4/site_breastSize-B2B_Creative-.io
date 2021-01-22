@@ -1,6 +1,6 @@
 /* DemiBold */
 @font-face {
-    font-family: 'GolosText';
+    font-family: 'GolosText-DemiBold';
     src: local('GolosText'),
     url('../fonts/GolosText-DemiBold.ttf') format('truetype'),
     url('../fonts/GolosText-DemiBold.eot?#iefix') format('embedded-opentype'),
@@ -8,10 +8,9 @@
     font-weight: 600;
     font-style: normal;
 }
-
 /* Regular */
 @font-face {
-    font-family: 'GolosText';
+    font-family: 'GolosText-Regular';
     src: local('GolosText'),
     url('../fonts/GolosText-Regular.ttf') format('truetype'),
     url('../fonts/GolosText-Regular.eot?#iefix') format('embedded-opentype'),
@@ -19,10 +18,9 @@
     font-weight: 400;
     font-style: normal;
 }
-
 /* Medium */
 @font-face {
-    font-family: 'GolosText';
+    font-family: 'GolosText-Medium';
     src: local('GolosText'),
     url('../fonts/GolosText-Medium.ttf') format('truetype'),
     url('../fonts/GolosText-Medium.eot?#iefix') format('embedded-opentype'),
@@ -30,10 +28,9 @@
     font-weight: 500;
     font-style: normal;
 }
-
 /* Bold */
 @font-face {
-    font-family: 'GolosText';
+    font-family: 'GolosText-Bold';
     src: local('GolosText'),
     url('../fonts/GolosText-Bold.ttf') format('truetype'),
     url('../fonts/GolosText-Bold.eot?#iefix') format('embedded-opentype'),
@@ -41,10 +38,9 @@
     font-weight: 700;
     font-style: normal;
 }
-
 /* Black */
 @font-face {
-    font-family: 'GolosText';
+    font-family: 'GolosText-Black';
     src: local('GolosText'),
     url('../fonts/GolosText-Black.ttf') format('truetype'),
     url('../fonts/GolosText-Black.eot?#iefix') format('embedded-opentype'),
@@ -52,7 +48,36 @@
     font-weight: 900;
     font-style: normal;
 }
-
+/* PFRegalDisplayPro-MediumItalic */
+@font-face {
+    font-family: 'PFRegalDisplayPro-MediumItalic';
+    src: local('PF Regal Display Pro Medium Italic'), local('PF-Regal-Display-Pro-Medium-Italic'),
+    url('../fonts/PFRegalDisplayPro-MediumItalic.woff2') format('woff2'),
+    url('../fonts/PFRegalDisplayPro-MediumItalic.woff') format('woff'),
+    url('../fonts/PFRegalDisplayPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+/* PFRegalDisplayPro-Regular */
+@font-face {
+    font-family: 'PFRegalDisplayPro-Regular';
+    src: local('PF Regal Display Pro Regular'), local('PF-Regal-Display-Pro-Regular'),
+    url('../fonts/PFRegalDisplayPro-Regular.woff2') format('woff2'),
+    url('../fonts/PFRegalDisplayPro-Regular.woff') format('woff'),
+    url('../fonts/PFRegalDisplayPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* PFRegalDisplayPro-Medium */
+@font-face {
+    font-family: 'PFRegalDisplayPro-Medium';
+    src: local('PF Regal Display Pro Medium'), local('PF-Regal-Display-Pro-Medium'),
+    url('../fonts/PFRegalDisplayPro-Medium.woff2') format('woff2'),
+    url('../fonts/PFRegalDisplayPro-Medium.woff') format('woff'),
+    url('../fonts/PFRegalDisplayPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
 *,::before,::after{
     box-sizing:border-box;
     margin: 0;
@@ -60,7 +85,7 @@
 }
 html{
     font-size: 16px;
-    font-family: "GolosText";
+    font-family: "GolosText-Regular", sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "Times New Roman", sans-serif;
@@ -119,7 +144,7 @@ header{
     white-space: pre;
 }
 .nav-menu-list_item:hover{
-    text-shadow: 0 0 0.7px #333;
+    text-shadow: 0 0 0.7px #2B3336;
 }
 .nav-menu-list_item:hover:after{
     content: '';
@@ -134,7 +159,7 @@ header{
 }
 .nav-contacts{
     display: flex;
-    color: #4F585B;
+    color: #72797C;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -146,25 +171,27 @@ header{
 
 .phone-number a{
     text-decoration: none;
+    font-family: GolosText-Bold, sans-serif;
     font-size: 1.125rem;
-    font-weight: bold;
-    color: #4F585B;
+    color: #404756;
 }
 .phone-number a span{
-    font-weight: normal;
+    font-family: GolosText-Medium, sans-serif;
+    color: #72797C;
 }
 .phone-number:hover{
     border-radius: 5px;
-    background-color: #cec6f1;
+    background-color: #d1ceee;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 3px 3px #cec6f1;
+    box-shadow: 0 0 3px 3px #d1ceee;
 }
 .phone-number:hover a span{
-    font-weight: bold;
+    color: #404756;
+    text-shadow: 0 0 1px #404756;
 }
 .workMode{
+    font-family: GolosText-DemiBold, sans-serif;
     font-size: 0.875rem;
-    text-shadow: 0 0 0.4px #4F585B;
 }
 .btnMenu{
     display: none;
@@ -188,19 +215,20 @@ header{
     color: #404756;
 }
 .header-desc_safe{
+    font-family: PFRegalDisplayPro-MediumItalic, sans-serif;
     font-size: 2.4rem;
-    font-style: italic;
-    font-weight: bold;
     animation: translateXText 2s ease-in 1 normal;
 }
 .header-desc h1{
+    font-family: PFRegalDisplayPro-MediumItalic, sans-serif;
+    font-weight: normal;
     font-size: 3.6rem;
     animation: translateXText 2s ease-in 1 normal;
 }
-.h1-italic{
-    font-style: italic;
+.h1-direct{
+    font-family: PFRegalDisplayPro-Medium, sans-serif;
 }
-.h1-italic span{
+.header-desc h1 p span{
     color: #cc715c;
 }
 @keyframes translateXText {
@@ -229,16 +257,17 @@ header{
     }
 }
 .header-desc_list__item{
+    color: #404756;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
 }
 .header-desc_list__item span{
-    text-shadow: 0 0 0.7px #404756;
+    font-family: GolosText-Medium, sans-serif;
 }
 .header-desc_list__item:before{
     content: '';
-    background: #d2a38f;
+    background: #D1997D;
     width: 1rem;
     height: 0.125rem;
     display: inline-block;
@@ -253,6 +282,7 @@ header{
     font-size: 1rem;
     background-color: #f0ccba;
     color: #4F585B;
+    font-family: GolosText-Regular, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,13 +370,19 @@ header{
     border-bottom: 1px solid #e1c3bf;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: #404756;
+    text-align: center;
 }
 .header-data-info h3{
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #404756;
+    font-family: GolosText-Medium, sans-serif;
+}
+.header-data-info p {
+    color: #4F585B;
+    font-family: GolosText-Regular, sans-serif;
 }
 .ringLeft{
     filter: blur(4px);
@@ -387,17 +423,22 @@ header{
 }
 .main-container-description{
     z-index: 2;
-    color: #3c4453;
+    color: #72797C;
 }
 .main-container-description__title{
     margin-left: -6rem;
 }
 .h2-title{
     font-size: 2.5rem;
+    color: #404756;
+    font-family: PFRegalDisplayPro-Medium, sans-serif;
+    font-weight: normal;
 }
 .h2-italic{
     font-size: 2.5rem;
-    font-style: italic;
+    color: #404756;
+    font-family: PFRegalDisplayPro-MediumItalic, sans-serif;
+    font-weight: normal;
 }
 .h2-desc{
     margin: 0.5rem 0 3.5rem;
@@ -413,15 +454,15 @@ header{
     position: relative;
 }
 .main-container-description_list li span{
-    text-shadow: 0 0 0.7px #3c4453;
+    font-family: GolosText-Medium, sans-serif;
 }
 .main-container-description_list li:before, .womans85_list li:before{
     content: '';
     position: absolute;
-    background: #d2a38f;
+    background: #D1997D;
     width: 1rem;
     height: 0.125rem;
-    top: 0.5rem;
+    top: 0.7rem;
     transform: translateY(50%);
     left: -2rem;
 }
@@ -430,13 +471,14 @@ header{
     margin-left: 2rem;
     margin-bottom: 2rem;
     align-items: center;
+    color: #707070;
 }
 .main-container-description-sign img{
-    height: 100px;
+    height: 6rem;
     margin-right: 1.5rem;
 }
 .author-sign{
-    font-weight: bold;
+    font-family: GolosText-Medium, sans-serif;
     margin-bottom: 0.5rem;
 }
 
@@ -459,6 +501,12 @@ header{
     color: #404756;
     box-shadow: 0 20px 60px #d8e8f4;
     border-radius: 10px;
+}
+.womans85-title .h2-desc{
+    color: #404756;
+}
+.womans85_list{
+    color: #677186;
 }
 
 
@@ -497,42 +545,78 @@ header{
 }
 @media(max-width: 1440px) {
     html{
-        font-size: 12px;
+        font-size: 14px;
     }
-
+    header{
+        background-position-x: -4rem ;
+    }
+    .nav {
+        padding: 0 5rem;
+    }
+}
+@media (max-width: 1367px) {
+    .nav {
+        padding: 0 4rem;
+    }
+    header{
+        background-position-x: -6rem ;
+    }
+    .nav-contacts{
+        margin-right: -1rem;
+    }
+    .main-img-doctor{
+        background-position: right;
+    }
 }
 @media(max-width: 1280px) {
-
-    .nav-contacts{
+    .nav-contacts {
         display: flex;
         flex-direction: column-reverse;
+        margin-right: 3rem;
+        margin-top: 1rem;
     }
-    .nav-contacts_address{
+    .nav-contacts_address {
         margin-right: 0;
         margin-top: 0.5rem;
+    }
+    .header-data {
+        padding: 0 10rem;
+    }
+    .ringRight{
+        top: 62%;
     }
 }
 @media(max-width: 1024px) {
     html{
-        font-size: 10px;
+        font-size: 12px;
     }
-    .header-data{
-        padding:0 10rem;
+    header{
+        background-position-x: -8rem ;
     }
     .nav-menu-list_item{
         margin: 0 7px;
     }
-    .main-container-description-sign img{
-        height: 80px;
+    .nav-contacts {
+        margin-right: -1rem;
+    }
+    .header-data{
+        padding:0 6.5rem;
+    }
+    .ringRight{
+        left: 68%;
+    }
+    .womans85{
+        padding-left: 15rem;
     }
 }
 @media(max-width: 800px) {
     header{
         padding-bottom: 5rem;
-        background-position-x: -8rem;
+        background-position-x: -22rem;
     }
     .nav{
-        padding: 0 5rem;
+        padding-left: 5rem;
+        padding-right: 0;
         justify-content: normal;
         align-items: center;
     }
@@ -565,24 +649,16 @@ header{
         transform: translateY(-50%);
         background-color: #D1997D;
     }
-    .nav-contacts{
-        flex-direction: row;
-    }
-    .nav-contacts_address{
-        margin-right: 2rem;
-        margin-top: 0;
-        margin-left: 4rem;
+    .nav-contacts {
+        margin-right: 0;
+        margin-left: 25rem;
     }
     .btnMenu {
         display: block;
     }
-
     .header-desc{
-        margin-left: 10rem;
+        margin-left: 8rem;
         margin-top: 3rem;
-    }
-    .header-desc_safe{
-        font-size: 2rem;
     }
     .header-desc h1{
         font-size: 3rem;
@@ -592,22 +668,21 @@ header{
         margin-top: 1.5rem;
     }
     .header-consultation{
-        margin-left: 20rem;
+        margin-left: 17rem;
     }
     .header-data{
         padding:0 5rem;
         margin-bottom: 6rem;
     }
+    .ringLeft{
+        top:30%;
+    }
     .ringRight{
-        top: 60%;
-        left: 68%;
+        top: 65%;
     }
     .main-container:before{
         width: 32rem;
         height: 32rem;
-    }
-    .main-img-doctor{
-        background-position-x: -6rem;
     }
     .h2-desc{
         margin-bottom: 2rem;
@@ -615,34 +690,24 @@ header{
     .main-container-description_list, .womans85_list{
         margin-bottom: 2rem;
     }
-    .main-container-description-sign img{
-        height: 60px;
-        margin-right: 1.5rem;
-    }
     .womans85{
-        height: 35rem;
-        padding-left: 15rem;
-        padding-top: 4rem;
+        height: 33rem;
+        padding-left: 8rem;
+        padding-top: 2rem;
     }
 }
 @media(max-width: 500px) {
     header{
-        padding-bottom: 5rem;
-        background-position-x: -30rem;
-    }
-    .nav{
-        padding: 0 5rem;
-        justify-content: normal;
-        align-items: center;
+        background-position-x: -23rem;
     }
     .nav-contacts{
+        margin-left: 0;
         display: none;
         flex-direction: column-reverse;
         position: absolute;
         height: 8rem;
         width: 13rem;
-        left: 5rem;
-        top: 26.3rem;
+        top: 25.3rem;
         border-radius: 5px;
         z-index: 5;
         background-color: white;
@@ -655,7 +720,6 @@ header{
     .btnMenu {
         display: block;
     }
-
     .header-desc{
         margin-left: 5rem;
     }
@@ -671,29 +735,49 @@ header{
     .header-consultation{
         margin-left: 10rem;
     }
+    .header-consultation, .header-consultation:after, .header-consultation:before, .header-consultation__text:after, .header-consultation__text:before{
+        width: 10rem;
+        height: 10rem;
+    }
     .header-data{
         padding:0;
-        margin-bottom: 4rem;
+        margin-bottom: 0;
+    }
+    .header-data-info p{
+        font-size: 0.9rem;
     }
     .ringLeft{
-        top: 35%;
+        top: 46%;
     }
     .ringRight{
-        top: 62%;
+        top: 68%;
         left: 74%;
         width: 80%;
     }
+    .main-container{
+        flex-direction: column-reverse;
+    }
     .main-container:before{
-        width: 32rem;
-        height: 32rem;
+        display: none;
     }
     .main-img-doctor{
-        background-position: right;
-        width: 80%;
-        background-position-x: -19rem;
+        height: 35rem;
+        width: 100%;
+        background-position-x: -6rem;
     }
     .main-container-description{
-        margin-left: -15%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container-description__title{
+        margin-left: 2rem;
+    }
+    .main-container-description_list, .main-container-description-sign{
+        margin-left: 6rem;
+    }
+    .main-container-description-sign{
+        margin-bottom: 0;
     }
     .h2-title, .h2-italic{
         font-size: 1.8rem;
@@ -702,7 +786,8 @@ header{
         font-size: 1rem;
     }
     .womans85-container {
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
     }
     .womans85{
         height: 30rem;
@@ -711,18 +796,76 @@ header{
         background-position-x: -10rem;
     }
 }
+
 @media(max-width: 360px) {
-    html{
-        font-size: 8px;
+    header{
+        background-position-x: -29rem;
+        padding-bottom: 2rem;
+    }
+    .nav{
+        padding-left: 2rem;
+        height: 5.5rem;
+    }
+    .nav_logo {
+        height: 5.5rem;
+    }
+    .nav_logo img{
+        height: 5.5rem;
+    }
+    .nav-menu-list{
+        width: 12rem;
+        height: 19rem;
+        left: 0;
+        top: 5.5rem;
+    }
+    .nav-contacts{
+        width: 12rem;
+        top: 23.75rem;
+    }
+    .btnMenu{
+        margin-left: 1rem;
+    }
+    .header-desc{
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+    .header-desc h1{
+        font-size: 1.8rem;
+    }
+    .header-desc_list{
+        font-size: 1rem;
+    }
+    .header-consultation{
+        margin-left: 7rem;
+    }
+    .header-data{
+        flex-wrap: wrap;
+        height: 180px;
+    }
+    .header-data-info{
+        width: 50%;
+        height: 50%;
+    }
+    .header-data-info h3 {
+        margin-top: 1rem;
     }
     .ringRight{
-        top: 64%;
-    }
-    .main-container:before{
-        width: 28rem;
-        height: 28rem;
+        top: 80%;
+        left: 45%;
+        width: 80%;
     }
     .main-img-doctor{
-        background-position-x: -24rem;
+        background-position-x: -15rem;
+    }
+    .womans85-container{
+        padding: 0;
+    }
+    .womans85{
+        height: 27rem;
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+    .womans85_list{
+        margin-left: 2rem;
     }
 }
